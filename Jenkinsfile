@@ -13,10 +13,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'uname -a'
+                sh 'hostname'
                 sh 'ls -lta'
                 sh 'ls -lta /'
                 sh 'df -h'
-                sh 'mkdir /.npm'
+                //sh 'mkdir /.npm'
                 sh 'sudo npm install'
             }
         }
