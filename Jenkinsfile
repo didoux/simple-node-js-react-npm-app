@@ -18,7 +18,7 @@ pipeline {
                 sh 'ls -lta /'
                 sh 'df -h'
                 //sh 'mkdir /.npm'
-                sh 'sudo npm install'
+                sh 'npm install'
             }
         }
         stage('Test') {
