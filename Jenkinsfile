@@ -1,7 +1,7 @@
 pipeline {
    agent {
        docker {
-           image 'node:6-alpine'
+           image 'node:latest'
            args '-v /root/.npm:/root/.npm'
            args '-p 3000:3000'
         }
@@ -16,6 +16,7 @@ pipeline {
                 sh 'ls -lta'
                 sh 'ls -lta /'
                 sh 'df -h'
+                sh 'mkdir /.npm'
                 sh 'sudo npm install'
             }
         }
