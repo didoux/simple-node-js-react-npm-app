@@ -13,7 +13,10 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'uname -a'
-                sh 'npm install'
+                sh 'ls -lta'
+                sh 'ls -lta /'
+                sh 'df -h'
+                sh 'sudo npm install'
             }
         }
         stage('Test') {
