@@ -2,7 +2,7 @@ pipeline {
    agent {
        docker {
            image 'node:latest'
-           args '-v /root/.npm:/root/.npm'
+           args '-v $HOME/.npm:/root/.npm'
            args '-p 3000:3000'
         }
     }
@@ -18,6 +18,7 @@ pipeline {
                 sh 'ls -lta /'
                 sh 'df -h'
                 //sh 'mkdir /.npm'
+                sh 'npm -g config set user root'
                 sh 'npm install'
             }
         }
