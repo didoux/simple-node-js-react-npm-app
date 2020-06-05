@@ -19,6 +19,8 @@ pipeline {
                 sh 'df -h'
                 //sh 'mkdir /.npm'
                 sh 'npm -g config set user root'
+		sh 'node --version'
+		sh 'npm --version'
                 sh 'npm install'
             }
         }
